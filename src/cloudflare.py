@@ -17,7 +17,6 @@ headers = {
            'X-Auth-Email': args.authemail
           }
 
-
 # Gets Zone ID based ID off of URL
 def get_cloudflare_zone_id(url):
     response = requests.get("https://api.cloudflare.com/client/v4/zones?per_page=50", headers=headers)
@@ -35,7 +34,6 @@ def update_pool_status(status):
     result = json.loads(response.text)['success']
     print("Update Success: {}".format(str(result)))
 
-
 lb_name = args.lbname
 lb_identifier = ""
 lb_pool_ids = ""
@@ -50,7 +48,6 @@ url = lb_name.split('.')[-2] + '.' + lb_name.split('.')[-1]
 status = args.enabled
 cloud_flare_org_id = "ee9c3d2ec9767ae7f85f283f88100a48"
 cloud_flare_zone = get_cloudflare_zone_id(url)
-
 
 # Get CF Load Balancer ID and Pools
 response = requests.get("https://api.cloudflare.com/client/v4/zones/{}/load_balancers".format(cloud_flare_zone),
