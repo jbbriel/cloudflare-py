@@ -37,4 +37,4 @@ python cloudflare.py --pool ${CF_POOL_NAME} --authemail ${CF_EMAIL} --authkey ${
 ```
 
 ## Contributing
-Contributing is allowed. Dont be afraid to make changed. :-)
+Contributing is allowed. Dont be afraid to make changes. :-)
